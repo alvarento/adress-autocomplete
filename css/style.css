@@ -1,0 +1,142 @@
+:root {
+    /* Colors */
+    --bg-color: #231b42;
+    --second-bg-color: #2f254e;
+    --font-color: #fff;
+    --loader-color: #51d4db;
+    --font-style: "Poppins", sans-serif, arial;
+
+    /* Font Size */
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--font-style);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+.loader {
+    animation: is-rotating .5s infinite linear;
+   width: 100px;
+   height: 100px;
+   border: 7px solid  var(--loader-color);
+   border-top-color: transparent;
+   border-radius: 50%;
+   position: absolute;
+   top: 40%;
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    min-width: 50%;
+    padding: 1rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+.title img {
+    width: 32px;
+    height: 32px;
+}
+
+.container h1 {
+    padding-top: 1rem;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+   margin-top: 5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.form-group label {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-left: 3px;
+}
+
+.form-group input {
+    background-color: transparent;
+    color: var(--font-color);
+    border: .1px solid #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    color: mediumspringgreen;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.form-group #cep:focus {
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+.form-group input::placeholder {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.form-group input:disabled {
+    background-color: var(--second-bg-color);
+    border: none;
+    opacity: .7;
+}
+
+.form-group small {
+    font-size: 1.2rem;
+}
+
+.buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.container button#clear,
+.container button#consult {
+    width: 50%;
+    padding: 1rem 0;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-image: linear-gradient(to bottom right, lightgreen, green);
+}
